@@ -12,7 +12,7 @@ layout: default
   <!-- ===================== HERO ===================== -->
   <section class="ls-hero">
     <canvas id="ls-hero-canvas" class="ls-hero__canvas" aria-hidden="true"></canvas>
-    <div class="landing__inner">
+    <div class="landing__inner ls-hero__grid">
       <div class="ls-hero__content">
         <span class="ls-eyebrow"><span class="dot"></span> PhD Candidate &middot; Biorobotics &amp; Biomechanics</span>
         <h1>Ehsan Sharafian<br><span class="grad">Wearable Sensing for Human Mobility</span></h1>
@@ -26,6 +26,11 @@ layout: default
           <a class="ls-btn ls-btn--ghost" href="{{ '/publications/' | relative_url }}">Publications</a>
         </div>
       </div>
+      {% if page.profile_image %}
+      <div class="ls-hero__photo">
+        <img src="{{ page.profile_image | relative_url }}" alt="Ehsan Sharafian" loading="eager">
+      </div>
+      {% endif %}
     </div>
     <div class="ls-hero__scroll">Scroll</div>
   </section>
