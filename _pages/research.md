@@ -1,6 +1,8 @@
 ---
 permalink: /research/
 title: "Research"
+layout: themed
+kicker: "What I work on"
 ---
 
 ## Overview

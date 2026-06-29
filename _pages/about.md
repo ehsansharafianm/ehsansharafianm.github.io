@@ -1,6 +1,8 @@
 ---
 permalink: /about/
 title: "About"
+layout: themed
+kicker: "Get to know me"
 ---
 
 I am a third-year PhD candidate in Mechanical Engineering at the University of Maine's Biorobotics and Biomechanics Lab, supervised by Dr. Babak Hejrati. My research focuses on wearable inertial measurement unit (IMU) based sensing, gait analysis, and haptic feedback systems designed to improve fall prevention and mobility in elderly adults.
