@@ -145,7 +145,110 @@
     nums.forEach(function (el) { io.observe(el); });
   }
 
-  function start() { initParticles(); initReveal(); initCountUp(); }
+  /* ---------- Live IMU / gait signal visualization ---------- */
+  function initGaitViz() {
+    var canvas = document.getElementById("ls-gait-canvas");
+    if (!canvas) return;
+    var ctx = canvas.getContext("2d");
+    var w, h, dpr;
+    var t = 0;
+    var running = false;
+
+    // Three synthetic IMU traces (accel-like) with a periodic gait cadence.
+    var traces = [
+      { color: "56, 225, 198", amp: 0.34, freq: 1.0,  phase: 0.0, noise: 0.05, label: "Shank Z" },
+      { color: "91, 140, 255", amp: 0.26, freq: 2.0,  phase: 1.1, noise: 0.04, label: "Thigh Y" },
+      { color: "245, 196, 90", amp: 0.18, freq: 0.5,  phase: 2.3, noise: 0.03, label: "Foot X" }
+    ];
+
+    function size() {
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = canvas.clientWidth;
+      h = canvas.clientHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    // Gait-like waveform: blends sinusoids + a heel-strike spike each cycle.
+    function sample(tr, x) {
+      var cycle = (x * tr.freq + tr.phase);
+      var base = Math.sin(cycle * Math.PI * 2) * tr.amp;
+      var harm = Math.sin(cycle * Math.PI * 4 + 0.6) * tr.amp * 0.3;
+      var strikePhase = (cycle % 1 + 1) % 1;
+      var strike = Math.exp(-Math.pow((strikePhase - 0.12) * 14, 2)) * tr.amp * 0.9;
+      var n = (Math.sin(x * 137.3 + tr.phase * 9) * 0.5) * tr.noise;
+      return base + harm + strike + n;
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, w, h);
+
+      // grid
+      ctx.strokeStyle = "rgba(91, 140, 255, 0.10)";
+      ctx.lineWidth = 1;
+      for (var gx = 0; gx <= w; gx += w / 12) {
+        ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, h); ctx.stroke();
+      }
+      for (var gy = 0; gy <= h; gy += h / 6) {
+        ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(w, gy); ctx.stroke();
+      }
+
+      var mid = h / 2;
+      var span = w; // px window
+      var pxStep = 2;
+
+      for (var i = 0; i < traces.length; i++) {
+        var tr = traces[i];
+        ctx.beginPath();
+        for (var px = 0; px <= span; px += pxStep) {
+          var x = (px / w) * 6 + t; // 6 "seconds" visible, scrolling with t
+          var y = mid - sample(tr, x) * h;
+          if (px === 0) ctx.moveTo(px, y); else ctx.lineTo(px, y);
+        }
+        ctx.strokeStyle = "rgba(" + tr.color + ", 0.95)";
+        ctx.lineWidth = 2;
+        ctx.shadowColor = "rgba(" + tr.color + ", 0.5)";
+        ctx.shadowBlur = 8;
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+
+        // leading dot
+        var lx = span;
+        var lxv = (lx / w) * 6 + t;
+        var ly = mid - sample(tr, lxv) * h;
+        ctx.beginPath();
+        ctx.arc(lx - 1, ly, 3, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(" + tr.color + ", 1)";
+        ctx.fill();
+      }
+
+      if (running && !reduceMotion) {
+        t += 0.015;
+        requestAnimationFrame(draw);
+      }
+    }
+
+    window.addEventListener("resize", function () { size(); if (!running) draw(); });
+    size();
+
+    // Only animate while visible (saves battery / CPU).
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            if (!running) { running = true; requestAnimationFrame(draw); }
+          } else { running = false; }
+        });
+      }, { threshold: 0.2 });
+      io.observe(canvas);
+    } else {
+      running = true; requestAnimationFrame(draw);
+    }
+    if (reduceMotion) draw();
+  }
+
+  function start() { initParticles(); initReveal(); initCountUp(); initGaitViz(); }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", start);
   } else { start(); }

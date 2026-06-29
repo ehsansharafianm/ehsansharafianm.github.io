@@ -42,6 +42,29 @@ layout: default
     </div>
   </section>
 
+  <!-- ===================== LIVE DATA VIZ ===================== -->
+  <section class="ls-section">
+    <div class="landing__inner">
+      <div class="ls-section__head reveal">
+        <span class="ls-kicker">The Data</span>
+        <h2>Reading movement in real time</h2>
+        <p>Gait analysis starts with raw inertial signals. Below is a live illustration of
+           multi-IMU accelerometer streams &mdash; the periodic spikes mark heel-strike
+           events my algorithms detect to estimate cadence, foot clearance, and balance.</p>
+      </div>
+      <div class="ls-viz reveal">
+        <div class="ls-viz__legend">
+          <span class="ls-viz__key"><i style="background:#38e1c6"></i> Shank&nbsp;Z</span>
+          <span class="ls-viz__key"><i style="background:#5b8cff"></i> Thigh&nbsp;Y</span>
+          <span class="ls-viz__key"><i style="background:#f5c45a"></i> Foot&nbsp;X</span>
+          <span class="ls-viz__live"><span class="dot"></span> LIVE</span>
+        </div>
+        <canvas id="ls-gait-canvas" class="ls-viz__canvas" aria-label="Animated illustration of multi-sensor IMU accelerometer signals during walking"></canvas>
+        <p class="ls-viz__note">Illustrative signals &mdash; representative of multi-IMU accelerometer data during walking.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== RESEARCH ===================== -->
   <section class="ls-section ls-section--alt">
     <div class="landing__inner">

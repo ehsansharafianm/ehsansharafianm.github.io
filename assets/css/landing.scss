@@ -225,6 +225,52 @@ search: false
 .ls-card h3 { margin: 0 0 0.5rem; font-size: 1.2rem; }
 .ls-card p { color: var(--ls-muted); margin: 0; font-size: 0.95rem; }
 
+/* ---------- Live data viz ---------- */
+.ls-viz {
+  background: var(--ls-panel);
+  border: 1px solid var(--ls-border);
+  border-radius: 18px;
+  padding: 1.2rem 1.2rem 1rem;
+  box-shadow: var(--ls-shadow);
+}
+.ls-viz__legend {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+  font-size: 0.85rem;
+  color: var(--ls-muted);
+}
+.ls-viz__key { display: inline-flex; align-items: center; gap: 0.45rem; }
+.ls-viz__key i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+.ls-viz__live {
+  margin-left: auto;
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  letter-spacing: 0.15em; font-size: 0.72rem; font-weight: 700;
+  color: var(--ls-accent);
+}
+.ls-viz__live .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--ls-accent); box-shadow: 0 0 10px var(--ls-accent);
+  animation: ls-pulse 1.6s infinite;
+}
+.ls-viz__canvas {
+  width: 100%;
+  height: 280px;
+  display: block;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(7,17,31,0.6), rgba(11,18,32,0.9));
+}
+.ls-viz__note {
+  margin: 0.7rem 0 0;
+  font-size: 0.78rem;
+  color: var(--ls-muted);
+  opacity: 0.7;
+  text-align: center;
+}
+@media (max-width: 600px) { .ls-viz__canvas { height: 220px; } }
+
 /* ---------- Timeline ---------- */
 .ls-timeline { position: relative; margin-top: 1rem; padding-left: 0; }
 .ls-timeline::before {
