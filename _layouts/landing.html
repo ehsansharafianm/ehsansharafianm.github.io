@@ -1,0 +1,141 @@
+---
+layout: default
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/landing.css' | relative_url }}">
+
+<div class="landing">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="ls-hero">
+    <canvas id="ls-hero-canvas" class="ls-hero__canvas" aria-hidden="true"></canvas>
+    <div class="landing__inner">
+      <div class="ls-hero__content">
+        <span class="ls-eyebrow"><span class="dot"></span> PhD Candidate &middot; Biorobotics &amp; Biomechanics</span>
+        <h1>Ehsan Sharafian<br><span class="grad">Wearable Sensing for Human Mobility</span></h1>
+        <p class="lede">
+          I build real-time, IMU-based gait analysis and haptic feedback systems
+          that help prevent falls and restore mobility in older adults &mdash;
+          bridging wearable hardware, signal processing, and biomechanics.
+        </p>
+        <div class="ls-cta">
+          <a class="ls-btn ls-btn--primary" href="{{ '/research/' | relative_url }}">Explore Research &rarr;</a>
+          <a class="ls-btn ls-btn--ghost" href="{{ '/publications/' | relative_url }}">Publications</a>
+        </div>
+      </div>
+    </div>
+    <div class="ls-hero__scroll">Scroll</div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="ls-section">
+    <div class="landing__inner">
+      <div class="ls-stats">
+        <div class="ls-stat reveal"><div class="num"><span data-count="5">0</span>+</div><div class="label">Research Projects</div></div>
+        <div class="ls-stat reveal" data-delay="1"><div class="num"><span data-count="2">0</span></div><div class="label">IMU Sensor Networks</div></div>
+        <div class="ls-stat reveal" data-delay="2"><div class="num"><span data-count="3">0</span>rd</div><div class="label">Year PhD</div></div>
+        <div class="ls-stat reveal" data-delay="3"><div class="num"><span data-count="100">0</span>%</div><div class="label">Real-time Focus</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEARCH ===================== -->
+  <section class="ls-section ls-section--alt">
+    <div class="landing__inner">
+      <div class="ls-section__head reveal">
+        <span class="ls-kicker">What I Do</span>
+        <h2>Research at the intersection of sensing &amp; movement</h2>
+        <p>My work integrates multiple sensing modalities into real-time systems that
+           measure, interpret, and respond to how people move.</p>
+      </div>
+      <div class="ls-cards">
+        <div class="ls-card reveal">
+          <div class="icon"><i class="fas fa-wave-square"></i></div>
+          <h3>Wearable IMU Sensing</h3>
+          <p>Multi-sensor IMU networks (Xsens DOT V2, Awinda MTw) for comprehensive, body-worn gait analysis.</p>
+        </div>
+        <div class="ls-card reveal" data-delay="1">
+          <div class="icon"><i class="fas fa-shoe-prints"></i></div>
+          <h3>Gait Analysis</h3>
+          <p>Real-time obstacle detection, foot-clearance estimation, and terrain classification during walking.</p>
+        </div>
+        <div class="ls-card reveal" data-delay="2">
+          <div class="icon"><i class="fas fa-hand-sparkles"></i></div>
+          <h3>Haptic Feedback</h3>
+          <p>Adaptive sensory cueing for gait correction and fall prevention, driven by live sensor data.</p>
+        </div>
+        <div class="ls-card reveal">
+          <div class="icon"><i class="fas fa-mobile-screen"></i></div>
+          <h3>Android Development</h3>
+          <p>Mobile apps for on-device sensor acquisition, visualization, and analysis using the Movella DOT SDK.</p>
+        </div>
+        <div class="ls-card reveal" data-delay="1">
+          <div class="icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Signal Processing</h3>
+          <p>MATLAB pipelines for multi-sensor synchronization, data fusion, and biomechanical feature extraction.</p>
+        </div>
+        <div class="ls-card reveal" data-delay="2">
+          <div class="icon"><i class="fas fa-shield-heart"></i></div>
+          <h3>Fall Prevention</h3>
+          <p>Translating research into practical solutions for mobility and quality of life in elderly adults.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE ===================== -->
+  <section class="ls-section">
+    <div class="landing__inner">
+      <div class="ls-section__head reveal">
+        <span class="ls-kicker">Journey</span>
+        <h2>Research timeline</h2>
+        <p>A snapshot of the path so far &mdash; from foundations to current work.</p>
+      </div>
+      <div class="ls-timeline">
+        <div class="ls-tl-item reveal">
+          <div class="when">Present</div>
+          <h3>PhD Candidate &middot; University of Maine</h3>
+          <p>Biorobotics &amp; Biomechanics Lab under Dr. Babak Hejrati &mdash; real-time IMU gait analysis &amp; haptic systems.</p>
+        </div>
+        <div class="ls-tl-item reveal" data-delay="1">
+          <div class="when">Recent</div>
+          <h3>Smartphone-Based Foot Height Estimation</h3>
+          <p>Published work on real-time foot clearance for fall prevention using only smartphone sensors.</p>
+        </div>
+        <div class="ls-tl-item reveal" data-delay="2">
+          <div class="when">Ongoing</div>
+          <h3>Multi-IMU Synchronization Framework</h3>
+          <p>Coordinating distributed Xsens networks with wireless streaming and real-time aggregation.</p>
+        </div>
+        <div class="ls-tl-item reveal" data-delay="3">
+          <div class="when">Foundation</div>
+          <h3>Mechanical Engineering &amp; Biomedical Research</h3>
+          <p>Hardware integration, software development, and biomechanical analysis bridging lab and practice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="ls-section ls-contact">
+    <div class="landing__inner">
+      <div class="reveal">
+        <span class="ls-kicker">Get in touch</span>
+        <h2>Let's collaborate</h2>
+        <p>Open to research collaborations, discussions on wearable sensing, and opportunities
+           to bring gait-analysis technology into the real world.</p>
+        <div class="ls-social">
+          <a href="mailto:ehsan.sharafian@maine.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/ehsansharafianm" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ehsan-sharafian-m" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="{{ '/assets/js/landing.js' | relative_url }}" defer></script>
