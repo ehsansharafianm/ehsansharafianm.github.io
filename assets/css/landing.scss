@@ -90,6 +90,20 @@ search: false
   box-shadow: 0 20px 60px rgba(3, 8, 20, 0.6);
   position: relative;
   z-index: 2;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.45s ease;
+}
+.ls-hero__photo:hover img {
+  transform: scale(1.06) rotate(-2deg);
+  border-color: var(--ls-accent);
+  box-shadow: 0 28px 80px rgba(56, 225, 198, 0.28);
+}
+/* ring reacts to hover too */
+.ls-hero__photo:hover::before { opacity: 0.85; animation-duration: 4s; }
+@media (prefers-reduced-motion: reduce) {
+  .ls-hero__photo img { transition: none; }
+  .ls-hero__photo:hover img { transform: none; }
 }
 /* glowing gradient ring */
 .ls-hero__photo::before {
