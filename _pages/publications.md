@@ -3,81 +3,81 @@ permalink: /publications/
 title: "Publications"
 layout: themed
 kicker: "Peer-reviewed work"
+tagline: "Journal articles on wearable IMU sensing, gait analysis, and haptic feedback for fall prevention."
 ---
 
-## Published Research
+## Journal Articles
 
-### Journal Articles & Conference Papers
+<div class="ls-pub-list" markdown="0">
 
-**Real-time Smartphone-based Foot Height Estimation for Fall Prevention in Elderly Adults**
+  <article class="ls-pub">
+    <div class="ls-pub__year">2026</div>
+    <div>
+      <h3 class="ls-pub__title">Real-Time Foot Height Estimation and Activity Classification Using a Foot-Mounted IMU Implemented on a Smartphone</h3>
+      <p class="ls-pub__authors"><span class="me">Sharafian Moghaddam, E.</span>, &amp; Hejrati, B.</p>
+      <p class="ls-pub__venue">Sensors, 26(10), 3166 <span class="badge">MDPI</span></p>
+      <div class="ls-pub__links">
+        <a href="https://doi.org/10.3390/s26103166" target="_blank" rel="noopener"><i class="fas fa-link"></i> DOI</a>
+        <a href="https://www.mdpi.com/1424-8220/26/10/3166" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Full Text</a>
+      </div>
+    </div>
+  </article>
 
-Sharafian, E., & Hejrati, B. (2024)  
-*IEEE Transactions on Biomedical Engineering*
+  <article class="ls-pub">
+    <div class="ls-pub__year">2025</div>
+    <div>
+      <h3 class="ls-pub__title">Real-Time Activity Recognition Using Minimal Biomechanical Features: A Lightweight IMU-Based Classifier for Older Adults</h3>
+      <p class="ls-pub__authors"><span class="me">Sharafian Moghaddam, E.</span>, Ellis, C., &amp; Hejrati, B.</p>
+      <p class="ls-pub__venue">IEEE Access, 13, 156215&ndash;156234 <span class="badge">IEEE</span></p>
+      <div class="ls-pub__links">
+        <a href="https://ieeexplore.ieee.org/document/11151290" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> IEEE Xplore</a>
+      </div>
+    </div>
+  </article>
 
-- Novel approach using smartphone IMU sensors for real-time foot clearance monitoring
-- Validated on elderly population for fall risk assessment
-- Achieves real-time performance with minimal computational overhead
-- Applications in fall prevention and mobility assistance
+  <article class="ls-pub">
+    <div class="ls-pub__year">2025</div>
+    <div>
+      <h3 class="ls-pub__title">The Effects of Real-Time Haptic Feedback on Gait and Cognitive Load in Older Adults</h3>
+      <p class="ls-pub__authors"><span class="me">Sharafian Moghaddam, E.</span>, Ellis, C., Sidaway, B., Hayes, M., &amp; Hejrati, B.</p>
+      <p class="ls-pub__venue">IEEE Transactions on Neural Systems and Rehabilitation Engineering <span class="badge">IEEE TNSRE</span></p>
+      <div class="ls-pub__links">
+        <a href="https://doi.org/10.1109/TNSRE.2025.3578865" target="_blank" rel="noopener"><i class="fas fa-link"></i> DOI</a>
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12230859/" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> Full Text</a>
+      </div>
+    </div>
+  </article>
 
-[DOI Link](#) | [PDF](#)
+  <article class="ls-pub">
+    <div class="ls-pub__year">2025</div>
+    <div>
+      <h3 class="ls-pub__title">Increasing Thigh Extension with Haptic Feedback Affects Leg Coordination in Young and Older Adult Walkers</h3>
+      <p class="ls-pub__authors">Alizadeh Noghani, M., <span class="me">Sharafian Moghaddam, E.</span>, Sidaway, B., &amp; Hejrati, B.</p>
+      <p class="ls-pub__venue">Journal of Biomechanics, 181, 112525 <span class="badge">Elsevier</span></p>
+      <div class="ls-pub__links">
+        <a href="https://doi.org/10.1016/j.jbiomech.2025.112525" target="_blank" rel="noopener"><i class="fas fa-link"></i> DOI</a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/39848074/" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> PubMed</a>
+      </div>
+    </div>
+  </article>
 
----
+</div>
 
-**Adaptive Haptic Feedback for Gait Correction: A Multi-Sensor Approach**
+## Profiles
 
-Sharafian, E., Hejrati, B., et al. (2024)  
-*Journal of Rehabilitation Research and Development*
+Find the most up-to-date list of my work on:
 
-- Integrated haptic feedback system with multi-IMU gait analysis
-- Real-time adaptive algorithms based on gait parameters
-- User studies demonstrating effectiveness in fall prevention
-- Clinical applications for elderly and balance-impaired populations
-
-[DOI Link](#) | [PDF](#)
-
----
-
-## Conference Presentations
-
-**"Wearable IMU Networks for Real-time Obstacle Detection During Gait"**
-
-Sharafian, E., Hejrati, B.  
-*International Conference on Biomedical Engineering & Informatics (ICBEI), 2024*
-
-Presented novel multi-sensor network architecture for detecting and characterizing obstacles during walking tasks in elderly adults.
-
----
-
-**"ObjectCrossing: Mobile Application for Real-time Gait Analysis"**
-
-Sharafian, E., Hejrati, B.  
-*IEEE Engineering in Medicine and Biology Society Conference (EMBC), 2023*
-
-Demonstrated real-time gait analysis capabilities on Android mobile devices using Xsens sensor networks.
-
----
+- [Google Scholar](https://scholar.google.com/citations?user=IF_W5kkAAAAJ&hl=en)
+- [ResearchGate](https://www.researchgate.net/profile/Ehsan-Sharafian-Moghaddam)
 
 ## Research Areas
 
-- Wearable Inertial Measurement Unit (IMU) Sensing
-- Gait Analysis and Biomechanical Assessment
-- Fall Prevention and Elderly Care Technologies
-- Haptic Feedback and Sensory Augmentation
-- Real-time Mobile Signal Processing
-- Machine Learning for Terrain Classification
-
-## Funding & Support
-
-Research supported by the University of Maine's Biorobotics and Biomechanics Lab and Department of Mechanical Engineering.
+- Wearable Inertial Measurement Unit (IMU) sensing
+- Gait analysis and biomechanical assessment
+- Fall prevention and elderly-care technologies
+- Haptic feedback and sensory augmentation
+- Real-time mobile signal processing and activity recognition
 
 ---
 
-## Collaboration & Mentorship
-
-Open to collaborations in:
-- Wearable sensing and biomechanics
-- Fall prevention technologies
-- Mobile health applications
-- Elderly care innovation
-
-For research inquiries, please contact: [ehsan.sharafian@maine.edu](mailto:ehsan.sharafian@maine.edu)
+For research inquiries or collaboration, please contact [ehsan.sharafian@maine.edu](mailto:ehsan.sharafian@maine.edu).
