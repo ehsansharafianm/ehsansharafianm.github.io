@@ -6,7 +6,7 @@ kicker: "Peer-reviewed work"
 tagline: "Journal articles on wearable IMU sensing, gait analysis, and haptic feedback for fall prevention."
 ---
 
-## Journal Articles
+## Wearable Sensing, Gait & Haptics
 
 <div class="ls-pub-list" markdown="0">
 
@@ -57,6 +57,36 @@ tagline: "Journal articles on wearable IMU sensing, gait analysis, and haptic fe
       <div class="ls-pub__links">
         <a href="https://doi.org/10.1016/j.jbiomech.2025.112525" target="_blank" rel="noopener"><i class="fas fa-link"></i> DOI</a>
         <a href="https://pubmed.ncbi.nlm.nih.gov/39848074/" target="_blank" rel="noopener"><i class="fas fa-file-lines"></i> PubMed</a>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+## Robotics & Mechanism Analysis
+
+<div class="ls-pub-list" markdown="0">
+
+  <article class="ls-pub">
+    <div class="ls-pub__year">2023</div>
+    <div>
+      <h3 class="ls-pub__title">Trajectory Optimization of a Spot-Welding Robot in the Joint and Cartesian Spaces</h3>
+      <p class="ls-pub__authors"><span class="me">Sharafian Moghaddam, E.</span>, Saryazdi, M. Gh., &amp; Taghvaeipour, A.</p>
+      <p class="ls-pub__venue">International Journal of Robotics &amp; Automation, 38(2), 109&ndash;125 <span class="badge">IJRA</span></p>
+      <div class="ls-pub__links">
+        <a href="https://doi.org/10.2316/J.2023.206-0701" target="_blank" rel="noopener"><i class="fas fa-link"></i> DOI</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="ls-pub">
+    <div class="ls-pub__year">2022</div>
+    <div>
+      <h3 class="ls-pub__title">Revisiting Screw Theory-Based Approaches in the Constraint Wrench Analysis of Robotic Systems</h3>
+      <p class="ls-pub__authors"><span class="me">Sharafian Moghaddam, E.</span>, Taghvaeipour, A., &amp; Ghassabzadeh Saryazdi, M.</p>
+      <p class="ls-pub__venue">Robotica, 40(5), 1406&ndash;1430 <span class="badge">Cambridge</span></p>
+      <div class="ls-pub__links">
+        <a href="https://doi.org/10.1017/S026357472100117X" target="_blank" rel="noopener"><i class="fas fa-link"></i> DOI</a>
       </div>
     </div>
   </article>
