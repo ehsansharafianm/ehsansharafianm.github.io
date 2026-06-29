@@ -1,6 +1,8 @@
 ---
 permalink: /publications/
 title: "Publications"
+layout: themed
+kicker: "Peer-reviewed work"
 ---
 
 ## Published Research

@@ -7,3 +7,44 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* ==========================================================================
+   Site-wide dark theme overrides for consistency with the custom landing page
+   ========================================================================== */
+$ls-bg: #0b1220;
+$ls-panel: #14213a;
+$ls-text: #e7edf7;
+$ls-muted: #9fb0c9;
+$ls-accent: #38e1c6;
+$ls-border: rgba(91, 140, 255, 0.18);
+
+body { background-color: $ls-bg; color: $ls-text; }
+
+/* Top navigation / masthead */
+.masthead {
+  background-color: rgba(11, 18, 32, 0.85);
+  border-bottom: 1px solid $ls-border;
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  backdrop-filter: saturate(140%) blur(10px);
+}
+.masthead__inner-wrap { padding-top: 0.8em; padding-bottom: 0.8em; }
+.site-title, .site-title:visited { color: $ls-text; font-weight: 800; }
+.greedy-nav { background: transparent; }
+.greedy-nav a { color: $ls-muted; font-weight: 600; }
+.greedy-nav a:hover { color: $ls-accent; }
+.greedy-nav .visible-links a:before { background: $ls-accent; height: 2px; }
+.greedy-nav button { background: transparent; }
+.greedy-nav .hidden-links { background: $ls-panel; border: 1px solid $ls-border; }
+.greedy-nav .hidden-links a { color: $ls-text; }
+.greedy-nav .hidden-links a:hover { color: $ls-accent; }
+
+/* Footer */
+.page__footer {
+  background-color: #070e1c;
+  color: $ls-muted;
+  border-top: 1px solid $ls-border;
+}
+.page__footer a, .page__footer a:visited { color: $ls-muted; }
+.page__footer a:hover { color: $ls-accent; }
+.page__footer-follow .social-icons a { color: $ls-muted; }
+.page__footer-follow .social-icons a:hover { color: $ls-accent; }

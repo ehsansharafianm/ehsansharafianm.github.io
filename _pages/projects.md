@@ -1,6 +1,8 @@
 ---
 permalink: /projects/
 title: "Projects"
+layout: themed
+kicker: "Things I've built"
 ---
 
 ## Research & Development Projects
